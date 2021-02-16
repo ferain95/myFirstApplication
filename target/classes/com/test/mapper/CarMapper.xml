@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+            PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+    <mapper namespace="com.test.mapper.CarMapper">
+    <insert id="insertCar"
+            parameterType="com.test.Entity.Car"
+            useGeneratedKeys="true"
+            keyProperty="id"
+            keyColumn="ID">
+        INSERT INTO CAR
+        ("ID", BRAND, COLOR, FUELCAPACITY, SEATS)
+        VALUES
+        (car_sequence.nextval, #{brand}, #{color}, #{fuelCapacity}, #{seats})
+    </insert>
+    <select id="getAllCars"
+            resultType ="com.test.Entity.Car">
+        SELECT ID, BRAND, COLOR, FUELCAPACITY, SEATS
+        FROM CAR
+    </select>
+    <delete id="deleteCar"
+            parameterType="map">
+        DELETE FROM CAR
+        WHERE ID = #{id}
+    </delete>
+    <update id="changePaint"
+            parameterType="map">
+        UPDATE CAR
+        SET COLOR = #{color}
+        WHERE ID = #{id}
+    </update>
+    <update id="addSeats"
+            parameterType="map">
+        UPDATE CAR
+        SET SEATS = #{seats}
+        WHERE ID = #{id}
+    </update>
+    <update id="changeParam"
+            parameterType="com.test.dto.CarDto">
+        UPDATE CAR
+        <set>
+            <if test = "carDto.brand != null and carDto.brand != '' ">
+                BRAND = #{carDto.brand},
+            </if>
+            <if test = "carDto.color != null and carDto.color != '' ">
+                COLOR = #{carDto.color},
+            </if>
+            <if test = "carDto.fuelCapacity != null and carDto.fuelCapacity != '' ">
+                fuelcapacity = #{carDto.fuelCapacity},
+            </if>
+            <if test = "carDto.seats != null and carDto.seats != '' ">
+                seats = #{carDto.seats},
+            </if>
+        </set>
+        WHERE ID = #{carDto.id}
+
+    </update>
+
+</mapper>

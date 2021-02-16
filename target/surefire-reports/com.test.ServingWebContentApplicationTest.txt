@@ -1,0 +1,94 @@
+-------------------------------------------------------------------------------
+Test set: com.test.ServingWebContentApplicationTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 8.058 s <<< FAILURE! - in com.test.ServingWebContentApplicationTest
+changeParam  Time elapsed: 1.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+Range for response status value 404 NOT_FOUND expected:<SUCCESSFUL> but was:<CLIENT_ERROR>
+
+> PUT http://localhost:61741/changeParam
+> WebTestClient-Request-Id: [1]
+> Accept: [application/json]
+> Content-Type: [application/json]
+> Content-Length: [76]
+
+{"id":0,"brand":"HONDA V2","color":"BLACK V2","fuelCapacity":5000,"seats":6}
+
+< 404 NOT_FOUND Not Found
+< Vary: [Origin, Access-Control-Request-Method, Access-Control-Request-Headers]
+< Content-Type: [application/json]
+< Transfer-Encoding: [chunked]
+< Date: [Wed, 10 Feb 2021 08:34:20 GMT]
+
+{"timestamp":"2021-02-10T08:34:20.241+00:00","status":404,"error":"Not Found","message":"","path":"/changeParam"}
+
+	at com.test.ServingWebContentApplicationTest$changeParamTest.changeParam(ServingWebContentApplicationTest.java:206)
+Caused by: java.lang.AssertionError: Range for response status value 404 NOT_FOUND expected:<SUCCESSFUL> but was:<CLIENT_ERROR>
+	at com.test.ServingWebContentApplicationTest$changeParamTest.changeParam(ServingWebContentApplicationTest.java:206)
+
+getAllCars  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.AssertionError: 
+Range for response status value 404 NOT_FOUND expected:<SUCCESSFUL> but was:<CLIENT_ERROR>
+
+> GET http://localhost:61741/getAllCars
+> WebTestClient-Request-Id: [2]
+
+No content
+
+< 404 NOT_FOUND Not Found
+< Vary: [Origin, Access-Control-Request-Method, Access-Control-Request-Headers]
+< Content-Type: [application/json]
+< Transfer-Encoding: [chunked]
+< Date: [Wed, 10 Feb 2021 08:34:20 GMT]
+
+{"timestamp":"2021-02-10T08:34:20.310+00:00","status":404,"error":"Not Found","message":"","path":"/getAllCars"}
+
+	at com.test.ServingWebContentApplicationTest$getAllCarTest.getAllCars(ServingWebContentApplicationTest.java:159)
+Caused by: java.lang.AssertionError: Range for response status value 404 NOT_FOUND expected:<SUCCESSFUL> but was:<CLIENT_ERROR>
+	at com.test.ServingWebContentApplicationTest$getAllCarTest.getAllCars(ServingWebContentApplicationTest.java:159)
+
+deleteCar  Time elapsed: 0.061 s  <<< FAILURE!
+java.lang.AssertionError: 
+Range for response status value 404 NOT_FOUND expected:<SUCCESSFUL> but was:<CLIENT_ERROR>
+
+> DELETE http://localhost:61741/deleteCar?id=666
+> WebTestClient-Request-Id: [3]
+
+No content
+
+< 404 NOT_FOUND Not Found
+< Vary: [Origin, Access-Control-Request-Method, Access-Control-Request-Headers]
+< Content-Type: [application/json]
+< Transfer-Encoding: [chunked]
+< Date: [Wed, 10 Feb 2021 08:34:20 GMT]
+
+{"timestamp":"2021-02-10T08:34:20.385+00:00","status":404,"error":"Not Found","message":"","path":"/deleteCar"}
+
+	at com.test.ServingWebContentApplicationTest$deleteCarTest.deleteCar(ServingWebContentApplicationTest.java:131)
+Caused by: java.lang.AssertionError: Range for response status value 404 NOT_FOUND expected:<SUCCESSFUL> but was:<CLIENT_ERROR>
+	at com.test.ServingWebContentApplicationTest$deleteCarTest.deleteCar(ServingWebContentApplicationTest.java:131)
+
+insertCar  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+Range for response status value 404 NOT_FOUND expected:<SUCCESSFUL> but was:<CLIENT_ERROR>
+
+> POST http://localhost:61741/insertCar
+> WebTestClient-Request-Id: [4]
+> Accept: [application/json]
+> Content-Type: [application/json]
+> Content-Length: [70]
+
+{"id":0,"brand":"Honda","color":"Black","fuelCapacity":4500,"seats":4}
+
+< 404 NOT_FOUND Not Found
+< Vary: [Origin, Access-Control-Request-Method, Access-Control-Request-Headers]
+< Content-Type: [application/json]
+< Transfer-Encoding: [chunked]
+< Date: [Wed, 10 Feb 2021 08:34:20 GMT]
+
+{"timestamp":"2021-02-10T08:34:20.436+00:00","status":404,"error":"Not Found","message":"","path":"/insertCar"}
+
+	at com.test.ServingWebContentApplicationTest$insertCarTest.insertCar(ServingWebContentApplicationTest.java:85)
+Caused by: java.lang.AssertionError: Range for response status value 404 NOT_FOUND expected:<SUCCESSFUL> but was:<CLIENT_ERROR>
+	at com.test.ServingWebContentApplicationTest$insertCarTest.insertCar(ServingWebContentApplicationTest.java:85)
+

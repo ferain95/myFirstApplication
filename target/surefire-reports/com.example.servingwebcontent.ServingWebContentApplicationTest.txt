@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: com.example.servingwebcontent.ServingWebContentApplicationTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.854 s <<< FAILURE! - in com.example.servingwebcontent.ServingWebContentApplicationTest
+homePage  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'greetingController': Unsatisfied dependency expressed through field 'carMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'carMapper' defined in file [C:\Users\jorlo\Desktop\gs-serving-web-content-master\complete\target\classes\com\example\servingwebcontent\mapper\CarMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'carMapper' defined in file [C:\Users\jorlo\Desktop\gs-serving-web-content-master\complete\target\classes\com\example\servingwebcontent\mapper\CarMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+
+greetingWithUser  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'greetingController': Unsatisfied dependency expressed through field 'carMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'carMapper' defined in file [C:\Users\jorlo\Desktop\gs-serving-web-content-master\complete\target\classes\com\example\servingwebcontent\mapper\CarMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'carMapper' defined in file [C:\Users\jorlo\Desktop\gs-serving-web-content-master\complete\target\classes\com\example\servingwebcontent\mapper\CarMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+
+greeting  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'greetingController': Unsatisfied dependency expressed through field 'carMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'carMapper' defined in file [C:\Users\jorlo\Desktop\gs-serving-web-content-master\complete\target\classes\com\example\servingwebcontent\mapper\CarMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'carMapper' defined in file [C:\Users\jorlo\Desktop\gs-serving-web-content-master\complete\target\classes\com\example\servingwebcontent\mapper\CarMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+Caused by: java.lang.IllegalArgumentException: Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
+
